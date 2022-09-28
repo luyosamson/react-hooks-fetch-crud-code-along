@@ -19,15 +19,15 @@ function handleAddToCartClick(){
 
 }
 
-function handleDeleteItem(){
+// function handleDeleteItem(){
   
-  fetch(`http://localhost:4000/items/${item.id}`, {
-    method: "DELETE",
-  })
-    .then((r) => r.json())
-    .then(() => console.log("deleted!"));
+//   fetch(`http://localhost:4000/items/${item.id}`, {
+//     method: "DELETE",
+//   })
+//     .then((r) => r.json())
+//     .then(() => console.log("deleted!"));
     
-}
+// }
 
 // function handledeletedClick(){
 
@@ -37,9 +37,24 @@ function handleDeleteItem(){
 //   })
 
 // .then((r)=>r.json())
-// .then(()=>(onDeletedItem))
+// .then(()=>(onDeletedItem(item))
 
 // }
+
+  function handledeletedClick() {
+    fetch(`http://localhost:4000/items/${item.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => onDeletedItem(item));
+  }
+
+
+
+
+
+
+
 
 
   return (
@@ -49,7 +64,7 @@ function handleDeleteItem(){
       <button className={item.isInCart ? "remove" : "add"} onClick={handleAddToCartClick} >
         {item.isInCart ? "Remove From" : "Add to"} Cart
       </button>
-      <button className="remove" onClick={handleDeleteItem}>Delete</button>
+      <button className="remove" onClick={handledeletedClick}>Delete</button>
     </li>
   );
 }
