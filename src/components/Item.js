@@ -19,28 +19,6 @@ function handleAddToCartClick(){
 
 }
 
-// function handleDeleteItem(){
-  
-//   fetch(`http://localhost:4000/items/${item.id}`, {
-//     method: "DELETE",
-//   })
-//     .then((r) => r.json())
-//     .then(() => console.log("deleted!"));
-    
-// }
-
-// function handledeletedClick(){
-
-//   fetch(`http://localhost:4000/items/${item.id}`,{
-
-//   method:"DELETE",
-//   })
-
-// .then((r)=>r.json())
-// .then(()=>(onDeletedItem(item))
-
-// }
-
   function handledeletedClick() {
     fetch(`http://localhost:4000/items/${item.id}`, {
       method: "DELETE",
@@ -48,15 +26,7 @@ function handleAddToCartClick(){
       .then((r) => r.json())
       .then(() => onDeletedItem(item));
   }
-
-
-
-
-
-
-
-
-
+  
   return (
     <li className={item.isInCart ? "in-cart" : ""}>
       <span>{item.name}</span>

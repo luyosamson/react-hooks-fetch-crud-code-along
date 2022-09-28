@@ -1,22 +1,40 @@
 {
   "items": [
     {
-      "name": "",
-      "category": "Produce",
-      "isInCart": true,
-      "id": 13
+      "name": "chocolate",
+      "category": "Dairy",
+      "isInCart": false,
+      "id": 1
     },
     {
-      "name": "",
-      "category": "Produce",
+      "name": "chocolate",
+      "category": "Dairy",
       "isInCart": false,
-      "id": 14
+      "id": 2
     },
     {
-      "name": "",
-      "category": "Produce",
+      "name": "chocolate",
+      "category": "Dairy",
       "isInCart": false,
-      "id": 15
+      "id": 3
+    },
+    {
+      "name": "coffee",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 4
+    },
+    {
+      "name": "coffee",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 5
+    },
+    {
+      "name": "coffee",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 6
     }
   ]
 }
